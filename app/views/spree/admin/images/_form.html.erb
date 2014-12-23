@@ -5,7 +5,7 @@
       <%= f.file_field :attachment %>
     </div>
 
-    <%= content_tag :div, '', id: 'error-message' , data: { one_option_error: Spree.t(:one_option_per_type_must_be_selected) } %>
+    <%= content_tag :div, '', id: 'error-message' , data: { one_option_error: 'One Option Per Type Must Be Selected' } %>
     <% if @grouped_option_values.empty? %>
       <div data-hook="variant" class="field">
         <%= f.label Spree::Variant.model_name.human %><br>

@@ -20,8 +20,8 @@ Spree::Admin::ImagesController.class_eval do
       option_values_array.each do |option_value|
         option_values_combinations = option_values_combinations.product(option_value)
       end
-      debugger
-      option_values_combinations = option_values_combinations.map(&:flatten) if option_values_combinations.count > 1
+      # debugger
+      # option_values_combinations = option_values_combinations.map(&:flatten) if option_values_combinations.count > 1 # Doesn't seem to be required anymore...
 
       @product.variants.each do |variant|
         option_values_combinations.each do |ov_combination|

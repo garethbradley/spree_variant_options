@@ -6,6 +6,8 @@ Spree::OptionValue.class_eval do
     :url           => SpreeVariantOptions::VariantConfig[:option_value_url],
     :path          => SpreeVariantOptions::VariantConfig[:option_value_path]
 
+  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
   def has_image?
     image_file_name && !image_file_name.empty?
   end

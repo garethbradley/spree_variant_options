@@ -1,6 +1,7 @@
 *.gem
 .bundle
 .DS_Store
+.idea
 Gemfile.lock
 pkg/*
 public/tmp.html
